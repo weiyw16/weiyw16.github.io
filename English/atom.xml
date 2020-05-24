@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[weiyw16.github.io]]></title>
+  <link href="https://weiyw16.github.io/atom.xml" rel="self"/>
+  <link href="https://weiyw16.github.io/"/>
+  <updated>2020-05-24T20:10:09+08:00</updated>
+  <id>https://weiyw16.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[web test]]></title>
+    <link href="https://weiyw16.github.io/15903211654178.html"/>
+    <updated>2020-05-24T19:52:45+08:00</updated>
+    <id>https://weiyw16.github.io/15903211654178.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
+  
+</feed>
