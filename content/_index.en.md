@@ -19,9 +19,9 @@ Download all files from [`Google Drive`](https://drive.google.com/drive/folders/
 
 {{% /notice %}}
 
-* [velocity models/density models]({{%relref "content/velocity_model/_index.en.md"%}}) | [`Google`]() | [`Baidu`]()
-* [synthetic walkaway 2D VSP - raw]({{%relref "basics/configuration/_index.md#activate-search" %}}) | [`Google`]() | [`Baidu`]()
-* [synthetic walkaway 2D VSP - norm]({{%relref "content/seismic_data/_index.en.md"%}}) | [`Google`]() | [`Baidu`]() 
+* [velocity models/density models]({{%relref "content/velocity_model/_index.en.md"%}}) 
+* [synthetic walkaway 2D VSP - raw]({{%relref "basics/configuration/_index.md#activate-search" %}}) 
+* [synthetic walkaway 2D VSP - norm]({{%relref "content/seismic_data/_index.en.md"%}}) 
 
 <!-- ![Screenshot](https://github.com/matcornic/hugo-theme-learn/raw/master/images/screenshot.png?width=40pc&classes=shadow) -->
 

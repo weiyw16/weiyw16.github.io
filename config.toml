@@ -52,7 +52,7 @@ weight = 30
 title = "VSP公开数据集"
 weight = 3
 languageName = "简体中文"
-landingPageURL = "/zh"
+landingPageURL = "/cn"
 landingPageName = "<i class='fas fa-home'></i> 家"
 
 [[Languages.zh.menu.shortcuts]]

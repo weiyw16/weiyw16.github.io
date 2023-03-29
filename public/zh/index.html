@@ -12,20 +12,20 @@
     <title>VSP公开数据集 :: VSP公开数据集</title>
 
     
-    <link href="/css/nucleus.css?1680058767" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680058767" rel="stylesheet">
-    <link href="/css/hybrid.css?1680058767" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680058767" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680058767" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680058767" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680058767" rel="stylesheet">
-    <link href="/css/theme.css?1680058767" rel="stylesheet">
-    <link href="/css/tabs.css?1680058767" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680058767" rel="stylesheet">
+    <link href="/css/nucleus.css?1680061199" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1680061199" rel="stylesheet">
+    <link href="/css/hybrid.css?1680061199" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1680061199" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1680061199" rel="stylesheet">
+    <link href="/css/auto-complete.css?1680061199" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1680061199" rel="stylesheet">
+    <link href="/css/theme.css?1680061199" rel="stylesheet">
+    <link href="/css/tabs.css?1680061199" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1680061199" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680058767"></script>
+    <script src="/js/jquery-3.3.1.min.js?1680061199"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -42,7 +42,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href='/zh'>
+      <a id="logo" href='/cn'>
 
 <svg id="grav-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	width="100%" height="100%"  viewBox="0 0 285.1 69.9" xml:space="preserve">
@@ -90,14 +90,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680058767"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680058767"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1680061199"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1680061199"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/weiyw16.github.io\/zh";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680058767"></script>
+<script type="text/javascript" src="/js/search.js?1680061199"></script>
 
     
   </div>
@@ -230,17 +230,43 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-           
-	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+ 
+<h1 id="垂直地震剖面vsp公开数据集">垂直地震剖面VSP公开数据集</h1>
+<p><a href="https://github.com/weiyw16/OpenVSPdata">OpenVSPdata</a> 制作和收集公开的垂直地震剖面大数据，用以服务人工智能在地球物理（科学计算）中的应用。</p>
+<p>数据包含了 (1) <a href="">地下介质P波速度模型</a>, (2) <a href="">合成的2D2CVSP地震数据</a> (截止到2023年3月，暂时只有合成数据).</p>
+<p>本项目提供的基本的数据可视化、数据预处理脚本和使用说明。</p>
+<p>期待使用和共同开发！</p>
+<h2 id="下载">下载</h2>
+<p>下载数据有两个数据源，<a href="https://drive.google.com/drive/folders/1J1UI__lw1BjUFeBrUA4ms6QqOXoB5HGS?usp=sharing"><code>Google Drive</code></a> 和 <a href="https://pan.baidu.com/s/1xR0sFMzBbdXmg7mf4VPMwQ?pwd=hpgc"><code>Baidu Netdisk</code></a>(密码是<code>hpgc</code>)。</p>
+<p>
+<div class="notices tip" ></div>
+
+数据的格式有以下三种，</p>
+<ul>
+<li><a href="">velocity models/density models</a></li>
+<li><a href="">synthetic walkaway 2D VSP - raw</a></li>
+<li><a href="">synthetic walkaway 2D VSP - norm</a></li>
+</ul>
+<!-- ![Screenshot](https://github.com/matcornic/hugo-theme-learn/raw/master/images/screenshot.png?width=40pc&classes=shadow) -->
+<h2 id="引用">引用</h2>
+<!-- 
+<div class="notices citations" ><p>@ARTICLE{PSnet,<br>
+author={Wei, Yanwen and Li, Yunyue Elita and Zong, Jingjing and Yang, Jizhong and Fu, Haohuan and Sun, Mengyao},<br>
+journal={IEEE Transactions on Geoscience and Remote Sensing}, <br>
+title={Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling}, <br>
+year={2022},<br>
+volume={60},<br>
+number={},<br>
+pages={1-16},<br>
+doi={10.1109/TGRS.2021.3124413}}</p>
+</div>
+ -->
+
+<div class="notices citations" ><p>[1] Y. Wei, Y. E. Li, J. Zong, J. Yang, H. Fu and M. Sun, &ldquo;Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling,&rdquo; in IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-16, 2022, Art no. 5908116, <a href="https://doi.org/10.1109/TGRS.2021.3124413">doi</a>: 10.1109/TGRS.2021.3124413.</p>
+</div>
+
+<h2 id="欢迎加入我们">欢迎加入我们</h2>
+<p>邮箱订阅<a href="https://groups.google.com/g/openvspdata"><code>谷歌讨论组</code></a> 或者联系项目管理者。</p>
 	
   
         
@@ -287,16 +313,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680058767"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680058767"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680058767"></script>
-    <script src="/js/jquery.sticky.js?1680058767"></script>
-    <script src="/js/featherlight.min.js?1680058767"></script>
-    <script src="/js/highlight.pack.js?1680058767"></script>
+    <script src="/js/clipboard.min.js?1680061199"></script>
+    <script src="/js/perfect-scrollbar.min.js?1680061199"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1680061199"></script>
+    <script src="/js/jquery.sticky.js?1680061199"></script>
+    <script src="/js/featherlight.min.js?1680061199"></script>
+    <script src="/js/highlight.pack.js?1680061199"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680058767"></script>
-    <script src="/js/learn.js?1680058767"></script>
-    <script src="/js/hugo-learn.js?1680058767"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1680061199"></script>
+    <script src="/js/learn.js?1680061199"></script>
+    <script src="/js/hugo-learn.js?1680061199"></script>
     
         
             <script src="https://weiyw16.github.io"></script>

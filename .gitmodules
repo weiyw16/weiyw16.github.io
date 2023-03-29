@@ -1,0 +1,11 @@
+[submodule "themes/hugo-theme-learn"] 
+  path = themes/hugo-theme-learn
+  url = https://github.com/matcornic/hugo-theme-learn.git
+
+
+
+
+[submodule "themes/hugo-embed-pdf-shortcode"] 
+  path = themes/hugo-embed-pdf-shortcode
+  url = https://github.com/anvithks/hugo-embed-pdf-shortcode.git
+

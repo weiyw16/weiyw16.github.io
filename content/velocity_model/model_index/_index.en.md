@@ -1,6 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
-title: index of velocity models
+title: Index of velocity models
 weight: 20
 ---
 ## Index of velocity models
@@ -10,7 +10,7 @@ weight: 20
 
 | Index of Model | view                                                               | parameters                   | notes |
 |:---------------|--------------------------------------------------------------------|------------------------------|-------|
-| vModel-10      | ![vp10](/images/data_prepare/velocity-model/vp_10.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |  [view]({{%relref "content/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10.md" %}}) \|  [Download]()     |
+| vModel-10      | ![vp10](/images/data_prepare/velocity-model/vp_10.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |  [view]({{%relref "content/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10.md" %}}) \|  [Download]({{%relref "content/download/_index.en.md"%}})     |
 | vModel-52      | ![vp52](/images/data_prepare/velocity-model/vp_52.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |
 | vModel-62      | ![vp62](/images/data_prepare/velocity-model/vp_62.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |
 | vModel-66      | ![vp66](/images/data_prepare/velocity-model/vp_66.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |

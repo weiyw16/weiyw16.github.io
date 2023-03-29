@@ -36,14 +36,14 @@
 },
 {
 	"uri": "https://weiyw16.github.io/en/velocity_model/model_index/",
-	"title": "index of velocity models",
+	"title": "Index of velocity models",
 	"tags": [],
 	"description": "",
 	"content": "Index of velocity models Index of Model view parameters notes vModel-10 nz=467, nx=801; dz=10, dx=10 view | Download vModel-52 nz=467, nx=801; dz=10, dx=10 vModel-62 nz=467, nx=801; dz=10, dx=10 vModel-66 nz=467, nx=801; dz=10, dx=10 vModel-80 nz=467, nx=801; dz=10, dx=10 vModel-81 nz=467, nx=801; dz=10, dx=10 vModel-414 nz=467, nx=801; dz=10, dx=10 vModel-416 nz=467, nx=801; dz=10, dx=10 vModel-419 nz=467, nx=801; dz=10, dx=10 vModel-430 nz=467, nx=801; dz=10, dx=10 vModel-431 nz=467, nx=801; dz=10, dx=10 vModel-432 nz=467, nx=801; dz=10, dx=10 vModel-450 nz=467, nx=801; dz=10, dx=10 vModel-451 nz=467, nx=801; dz=10, dx=10 vModel-452 nz=467, nx=801; dz=10, dx=10 vModel-453 nz=467, nx=801; dz=10, dx=10 "
 },
 {
 	"uri": "https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/",
-	"title": "synthetic 2D elastic walkaway VSP",
+	"title": "Synthetic 2D elastic walkaway VSP",
 	"tags": [],
 	"description": "",
 	"content": "for Train Index of Model Volume Location of Well Location of Shots Simulation parameters Notes vModel-10 240 x 2048 x 126 rz=50, dz=2, nz=126; rx=15, dx=50, nx=16 sz=5, sx=50, ds=50, ns=15 Ricker wavelet, fm=15 Hz, dt=0.002, nt=3001 cut for Test Index of Model Volume Location of Well Location of Shots Simulation parameters Notes vModel-10 140 x 2048 x 126 rz=50, dz=2, nz=126; rx=375 sz=5, sx=50, ds=5, ns=140 Ricker wavelet, fm=15 Hz, dt=0.002, nt=3001 cut "
@@ -67,7 +67,7 @@
 	"title": "Open VSP data",
 	"tags": [],
 	"description": "",
-	"content": "Open VSP data OpenVSPdata aims to collect large Vertical Seismic Profiling data for deep learning tasks of geophysics.\nWe release (1) velocity models, (2) synthetic 2D2C VSP data (till Mar 2023).\nWe also provide scripts for data visualization and basic processing.\nWe welcome your usage and feedbacks!\nDownload Download all files from Google Drive or Baidu Netdisk(with code hpgc)\nvelocity models/density models | Google | Baidu synthetic walkaway 2D VSP - raw | Google | Baidu synthetic walkaway 2D VSP - norm | Google | Baidu Reference [1] Y. Wei, Y. E. Li, J. Zong, J. Yang, H. Fu and M. Sun, \u0026ldquo;Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling,\u0026rdquo; in IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-16, 2022, Art no. 5908116, doi: 10.1109/TGRS.2021.3124413.\nJoin us You can join us by Google Group to make your contributions!\n"
+	"content": "Open VSP data OpenVSPdata aims to collect large Vertical Seismic Profiling data for deep learning tasks of geophysics.\nWe release (1) velocity models, (2) synthetic 2D2C VSP data (till Mar 2023).\nWe also provide scripts for data visualization and basic processing.\nWe welcome your usage and feedbacks!\nDownload Download all files from Google Drive or Baidu Netdisk(with code hpgc)\nvelocity models/density models synthetic walkaway 2D VSP - raw synthetic walkaway 2D VSP - norm Reference [1] Y. Wei, Y. E. Li, J. Zong, J. Yang, H. Fu and M. Sun, \u0026ldquo;Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling,\u0026rdquo; in IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-16, 2022, Art no. 5908116, doi: 10.1109/TGRS.2021.3124413.\nJoin us You can join us by Google Group to make your contributions!\n"
 },
 {
 	"uri": "https://weiyw16.github.io/en/categories/",

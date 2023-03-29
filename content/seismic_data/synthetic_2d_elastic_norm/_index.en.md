@@ -1,6 +1,6 @@
 ---
 date: 2016-04-09T16:50:16+02:00
-title: synthetic 2D elastic walkaway VSP
+title: Synthetic 2D elastic walkaway VSP
 weight: 20
 ---
 ## for Train
