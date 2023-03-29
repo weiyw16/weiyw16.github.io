@@ -11,4 +11,4 @@ chapter: true
 
 See P-velocity models used for synthetic data production. 
 
-* [Index of velocity models]({{%relref "content/velocity_model/_index.en.md"%}})
+* [Index of velocity models]({{%relref "content/velocity_model/model_index/_index.en.md"%}})
