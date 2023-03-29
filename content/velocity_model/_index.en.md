@@ -5,7 +5,7 @@ pre: "<b>3. </b>"
 chapter: true
 ---
 
-### Chapter 4
+### Chapter 3
 
 # velocity models
 

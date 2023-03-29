@@ -5,7 +5,7 @@ pre: "<b>2. </b>"
 chapter: true
 ---
 
-### Chapter 3
+### Chapter 2
 
 # quick start
 
