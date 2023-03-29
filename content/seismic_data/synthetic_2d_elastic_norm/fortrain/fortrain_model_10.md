@@ -1,5 +1,5 @@
 +++
-title = "train model-10"
+title = "vModel-10"
 date =  2023-03-28T21:29:22+08:00
 weight = 5
 +++

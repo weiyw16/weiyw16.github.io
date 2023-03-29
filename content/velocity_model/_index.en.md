@@ -1,7 +1,7 @@
 ---
 title: Velocity Models
 weight: 20
-pre: "<b>4. </b>"
+pre: "<b>3. </b>"
 chapter: true
 ---
 
@@ -9,4 +9,6 @@ chapter: true
 
 # velocity models
 
-Discover what this Hugo theme is all about and the core-concepts behind it.
+See P-velocity models used for synthetic data production. 
+
+* [Index of velocity models]({{%relref "content/velocity_model/_index.en.md"%}})

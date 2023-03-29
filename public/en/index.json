@@ -1,7 +1,7 @@
 [
 {
 	"uri": "https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/",
-	"title": "train model-10",
+	"title": "vModel-10",
 	"tags": [],
 	"description": "",
 	"content": "P velocity model Example 2D elastic seismic shot gather Vz component (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. Vx component (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. S-potential / S-waves (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. "
@@ -11,28 +11,14 @@
 	"title": "Download",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 1 download Discover what this Hugo theme is all about and the core-concepts behind it.\n"
-},
-{
-	"uri": "https://weiyw16.github.io/en/installation/",
-	"title": "Installation",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 2 installation Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+	"content": "Chapter 1 download Download all velocity models and synthetic VSP seismic data through the global link.\nGlobal link Google Drive Baidu Netdisk (with code hpgc) Divided link View figures before download. velocity models | synthetic walkaway 2D VSP - norm "
 },
 {
 	"uri": "https://weiyw16.github.io/en/quick-start/",
 	"title": "Quick Start",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 3 quick start Discover what this Hugo theme is all about and the core-concepts behind it.\n"
-},
-{
-	"uri": "https://weiyw16.github.io/en/download/download_velocity/",
-	"title": "download velocity models",
-	"tags": [],
-	"description": "",
-	"content": "about the velocity model "
+	"content": "Chapter 3 quick start 1. Requirement 2. Seismic data visualization 3. Data processing "
 },
 {
 	"uri": "https://weiyw16.github.io/en/velocity_model/model_index/",
@@ -53,14 +39,14 @@
 	"title": "Velocity Models",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 4 velocity models Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+	"content": "Chapter 4 velocity models See P-velocity models used for synthetic data production.\nIndex of velocity models "
 },
 {
 	"uri": "https://weiyw16.github.io/en/seismic_data/",
 	"title": "Seismic data",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 5 seismic data Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+	"content": "Chapter 5 seismic data 1. See synthetic 2D 2C elastic VSP data Data after normalization: ready for deep learning usage Data raw: ready for re-processing 2. See data in velocity model sequence vModel-10 "
 },
 {
 	"uri": "https://weiyw16.github.io/en/",

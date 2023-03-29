@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 weight: 15
-pre: "<b>3. </b>"
+pre: "<b>2. </b>"
 chapter: true
 ---
 
@@ -9,4 +9,8 @@ chapter: true
 
 # quick start
 
-Discover what this Hugo theme is all about and the core-concepts behind it.
+## 1. Requirement
+
+## 2. Seismic data visualization
+
+## 3. Data processing 
