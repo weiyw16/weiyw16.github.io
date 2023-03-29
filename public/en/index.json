@@ -1,0 +1,99 @@
+[
+{
+	"uri": "https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/",
+	"title": "train model-10",
+	"tags": [],
+	"description": "",
+	"content": "P velocity model Example 2D elastic seismic shot gather Vz component (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. Vx component (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. S-potential / S-waves (No. 50 to No. 59) Previous Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here. "
+},
+{
+	"uri": "https://weiyw16.github.io/en/download/",
+	"title": "Download",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 download Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2 installation Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/quick-start/",
+	"title": "Quick Start",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 3 quick start Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/download/download_velocity/",
+	"title": "download velocity models",
+	"tags": [],
+	"description": "",
+	"content": "about the velocity model "
+},
+{
+	"uri": "https://weiyw16.github.io/en/velocity_model/model_index/",
+	"title": "index of velocity models",
+	"tags": [],
+	"description": "",
+	"content": "Index of velocity models Index of Model view parameters notes vModel-10 nz=467, nx=801; dz=10, dx=10 view | Download vModel-52 nz=467, nx=801; dz=10, dx=10 vModel-62 nz=467, nx=801; dz=10, dx=10 vModel-66 nz=467, nx=801; dz=10, dx=10 vModel-80 nz=467, nx=801; dz=10, dx=10 vModel-81 nz=467, nx=801; dz=10, dx=10 vModel-414 nz=467, nx=801; dz=10, dx=10 vModel-416 nz=467, nx=801; dz=10, dx=10 vModel-419 nz=467, nx=801; dz=10, dx=10 vModel-430 nz=467, nx=801; dz=10, dx=10 vModel-431 nz=467, nx=801; dz=10, dx=10 vModel-432 nz=467, nx=801; dz=10, dx=10 vModel-450 nz=467, nx=801; dz=10, dx=10 vModel-451 nz=467, nx=801; dz=10, dx=10 vModel-452 nz=467, nx=801; dz=10, dx=10 vModel-453 nz=467, nx=801; dz=10, dx=10 "
+},
+{
+	"uri": "https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/",
+	"title": "synthetic 2D elastic walkaway VSP",
+	"tags": [],
+	"description": "",
+	"content": "for Train Index of Model Volume Location of Well Location of Shots Simulation parameters Notes vModel-10 240 x 2048 x 126 rz=50, dz=2, nz=126; rx=15, dx=50, nx=16 sz=5, sx=50, ds=50, ns=15 Ricker wavelet, fm=15 Hz, dt=0.002, nt=3001 cut for Test Index of Model Volume Location of Well Location of Shots Simulation parameters Notes vModel-10 140 x 2048 x 126 rz=50, dz=2, nz=126; rx=375 sz=5, sx=50, ds=5, ns=140 Ricker wavelet, fm=15 Hz, dt=0.002, nt=3001 cut "
+},
+{
+	"uri": "https://weiyw16.github.io/en/velocity_model/",
+	"title": "Velocity Models",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 4 velocity models Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/seismic_data/",
+	"title": "Seismic data",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 5 seismic data Discover what this Hugo theme is all about and the core-concepts behind it.\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/",
+	"title": "Open VSP data",
+	"tags": [],
+	"description": "",
+	"content": "Open VSP data OpenVSPdata aims to collect large Vertical Seismic Profiling data for deep learning tasks of geophysics.\nWe release (1) velocity models, (2) synthetic 2D2C VSP data (till Mar 2023).\nWe also provide scripts for data visualization and basic processing.\nWe welcome your usage and feedbacks!\nDownload Download all files from Google Drive or Baidu Netdisk(with code hpgc)\nvelocity models/density models | Google | Baidu synthetic walkaway 2D VSP - raw | Google | Baidu synthetic walkaway 2D VSP - norm | Google | Baidu Reference [1] Y. Wei, Y. E. Li, J. Zong, J. Yang, H. Fu and M. Sun, \u0026ldquo;Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling,\u0026rdquo; in IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-16, 2022, Art no. 5908116, doi: 10.1109/TGRS.2021.3124413.\nJoin us You can join us by Google Group to make your contributions!\n"
+},
+{
+	"uri": "https://weiyw16.github.io/en/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://weiyw16.github.io/en/credits/",
+	"title": "Credits",
+	"tags": [],
+	"description": "",
+	"content": "Contributors Thanks to Tsinghua HPGC group for supporting us to produce and open this data.\nPackages and libraries Madagascar - open-source software package for multidimensional data analysis and reproducible computational experiments. Python - programming language that lets you work quickly and integrate systems more effectively. Tooling Hugo - Open source software for web building. "
+},
+{
+	"uri": "https://weiyw16.github.io/en/showcase/",
+	"title": "Related work",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://weiyw16.github.io/en/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

@@ -1,0 +1,77 @@
+baseURL = "https://weiyw16.github.io"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Open VSP data"
+theme = ["hugo-embed-pdf-shortcode", "hugo-theme-learn"]
+themesdir = "./themes"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+enableInlineShortcodes = true
+
+[params]
+  editURL = "https://weiyw16.github.io"
+  description = ""
+  author = "Yanwen Wei"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  customMermaidURL = "https://weiyw16.github.io"
+  titleSeparator = "::"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Open VSP data"
+weight = 1
+languageName = "English"
+landingPageURL = "/en"
+landingPageName = "<i class='fas fa-home'></i> Home"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/weiyw16"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Related Work"
+url = "showcase"
+weight = 11
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
+[Languages.zh]
+title = "VSP公开数据集"
+weight = 3
+languageName = "简体中文"
+landingPageURL = "/zh"
+landingPageName = "<i class='fas fa-home'></i> 家"
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub 仓库"
+identifier = "ds"
+url = "https://github.com/weiyw16"
+weight = 10
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> 相关工作"
+url = "/showcase"
+weight = 11
+
+[[Languages.zh.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 鸣谢"
+url = "/credits"
+weight = 30
+
+
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true

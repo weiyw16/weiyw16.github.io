@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open VSP data</title>
+    <link>https://weiyw16.github.io/en/</link>
+    <description>Recent content on Open VSP data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 28 Mar 2023 21:29:22 +0800</lastBuildDate><atom:link href="https://weiyw16.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>train model-10</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/</guid>
+      <description>P velocity model Example 2D elastic seismic shot gather Vz component (No. 50 to No. 59) Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component (No. 50 to No. 59) Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves (No. 50 to No. 59) Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>https://weiyw16.github.io/en/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/credits/</guid>
+      <description>Contributors Thanks to Tsinghua HPGC group for supporting us to produce and open this data.
+Packages and libraries Madagascar - open-source software package for multidimensional data analysis and reproducible computational experiments. Python - programming language that lets you work quickly and integrate systems more effectively. Tooling Hugo - Open source software for web building. </description>
+    </item>
+    
+    <item>
+      <title>Related work</title>
+      <link>https://weiyw16.github.io/en/showcase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/showcase/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
