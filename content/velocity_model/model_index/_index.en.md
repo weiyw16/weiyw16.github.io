@@ -10,7 +10,7 @@ weight: 20
 
 | Index of Model | view                                                               | parameters                   | notes |
 |:---------------|--------------------------------------------------------------------|------------------------------|-------|
-| vModel-10      | ![vp10](/images/data_prepare/velocity-model/vp_10.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |  [view]({{%relref "content/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10.md" %}}) \|  [Download]({{%relref "content/download/_index.en.md"%}})     |
+| [vModel-10]({{< relref "content/velocity_model/model_index/models/smodel_10.md" >}})      | ![vp10](/images/data_prepare/velocity-model/vp_10.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |  [view]({{%relref "content/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10.md" %}}) \|  [Download]({{%relref "content/download/_index.en.md"%}})     |
 | vModel-52      | ![vp52](/images/data_prepare/velocity-model/vp_52.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |
 | vModel-62      | ![vp62](/images/data_prepare/velocity-model/vp_62.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |
 | vModel-66      | ![vp66](/images/data_prepare/velocity-model/vp_66.svg?width=20pc)  | nz=467, nx=801; dz=10, dx=10 |       |
