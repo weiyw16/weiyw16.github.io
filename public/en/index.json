@@ -358,7 +358,7 @@
 },
 {
 	"uri": "https://weiyw16.github.io/en/",
-	"title": "Open VSP data",
+	"title": "Open VSP data: A large scale open Vertical Seismic Profiling data",
 	"tags": [],
 	"description": "",
 	"content": "Open VSP data OpenVSPdata aims to collect large Vertical Seismic Profiling data for deep learning tasks of geophysics.\nWe release (1) velocity models, (2) synthetic 2D2C VSP data (till Mar 2023).\nWe also provide scripts for data visualization and basic processing.\nWe welcome your usage and feedbacks!\nDownload Download all files from Google Drive or Baidu Netdisk(with code hpgc)\nvelocity models/density models synthetic walkaway 2D VSP - raw synthetic walkaway 2D VSP - norm Reference [1] Y. Wei, Y. E. Li, J. Zong, J. Yang, H. Fu and M. Sun, \u0026ldquo;Deep Learning-Based P- and S-Wave Separation for Multicomponent Vertical Seismic Profiling,\u0026rdquo; in IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1-16, 2022, Art no. 5908116, doi: 10.1109/TGRS.2021.3124413.\nJoin us You can join us by Google Group to make your contributions!\n"

@@ -1,8 +1,9 @@
 ---
-title: "Open VSP data"
+title: "Open VSP data: A large scale open Vertical Seismic Profiling data"
 ---
 
 # Open VSP data
+
 [OpenVSPdata](https://weiyw16.github.io/) aims to collect large Vertical Seismic Profiling data for deep learning tasks of geophysics. 
 
 We release (1) [velocity models]({{%relref "content/velocity_model/_index.en.md"%}}), (2) [synthetic 2D2C VSP data]({{%relref "content/seismic_data/_index.en.md"%}}) (till Mar 2023). 
