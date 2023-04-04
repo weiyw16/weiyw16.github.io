@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nvcc -o ../bin/fd2d_snap_mprocess \
+  main.cu \
+  func.cu \
+  gpu_update_stress.cu \
+  gpu_update_velocity.cu \
+  -lm

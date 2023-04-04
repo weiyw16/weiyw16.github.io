@@ -1,0 +1,154 @@
+## ======================================
+##      made by weiyw @ 2019-12-19
+##		update by weiyw @ 2020-1-9
+##    Email:     weiyw17@gmail.com
+## ======================================
+from rsf.proj import *
+import os
+cwd = os.getcwd()
+## parameters ===========================
+model_num    = 0
+shot_num     = 141
+channel_num  = 4
+channel_name = ['vz', 'vx', 'div', 'curl']
+depth1       = 15
+depth2       = 65
+depth3       = 115
+nx           = 801
+nz           = 467
+dx           = 10
+dz           = 10
+dt           = 0.0005
+nr           = 126
+nt           = 12004
+pow1         = 2
+if_plot      = True
+if_shift     = False
+if_cut       = True
+snap_step    = 200
+it_start     = snap_step * 2
+it_end       = snap_step * int(nt / snap_step)
+snap_range   = range(it_start, it_end, snap_step)
+
+#dir_seismo   = "seismo"
+dir_seismo   = ""
+dir_shift    = "seismo_shift"
+dir_pown     = "seismo_pow"
+
+## tools ===========================
+def get_grey(Title):
+  return '''
+  grey color=owb title=%s 
+  screenratio=1.4 screenwd=7.14 screenht=10 labelsz=6 titlesz=6 font=2 
+  pclip=97 pad=n
+  scalebar=y ''' % Title
+
+def get_grey_small(Title):
+  return '''
+  grey color=owb title=%s 
+  screenratio=0.7 screenwd=7.14 screenht=5 labelsz=6 titlesz=6 font=2 
+  pclip=97 pad=n
+  scalebar=y ''' % Title
+
+## main  ==============================
+for this_model in range(model_num, model_num+1):
+#  this_model = 7
+  for this_shot in range(50, 50+5*shot_num, 5):
+    for this_channel in range(channel_num):
+      rawd_name="output/model_"+str(this_model)+"_shot_"+ str(this_shot)+"_"+str(channel_name[this_channel]) + ".bin"
+      file_name = "model_" + str(this_model) + "_shot_" + str(this_shot) + "_" + channel_name[this_channel]
+      in_name = dir_seismo + file_name
+      out_name = in_name + "_plot_ready"
+      tit=channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+      # pown = in_name + "_afterpow" # rsf file name
+      pown_dir = os.path.join( dir_pown, channel_name[this_channel] ) + file_name + "_afterpow" # binary file position and name
+      shift = in_name + "_aftershift_" # rsf file name
+      shift_dir = os.path.join( dir_shift, channel_name[this_channel] ) +  file_name + "_aftershift_" # binary file position and name
+      # cut = in_name + "_aftercut" # rsf file name
+      # cut_dir = os.path.join( dir_cut, channel_name[this_channel] ) + file_name + "_aftercut" # binary file position and name
+      this_cut_file = dir_seismo + "model_" + str(this_model) + "_shot_" + str(this_shot) + "_" + channel_name[0] + "_cut.txt"
+
+      fa = float( open(this_cut_file).readlines()[0] )
+      if fa < 0.3: fa = 0
+      elif fa > 2.2: fa = 1.9
+      else: fa = fa - 0.3
+
+      Flow(in_name+".rsf",'' , '''
+            echo in=%s n1=%g n2=%g 
+            data_format=native_float
+            ''' % ( os.path.join(cwd, rawd_name), nr, nt)  )
+      if if_cut:
+        if not if_shift:
+          Flow(out_name, in_name, '''
+                put o1=500 d1=20 label1=Depth unit1=m 
+                o2=0 d2=%g label2=Time unit2=s |
+                transp plane=12 |
+                bandpass fhi=500 |
+                window j1=4 |
+                pow pow1=2 |
+                window f1=%g n1=%g |
+                scale axis=1
+                datapath=%s
+                ''' % (dt, int(fa/dt/4), 2048, os.path.join(cwd, pown_dir)) )
+          if if_plot:
+                titp="after\ cut\ " + channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+                Result(out_name, get_grey_small(titp))
+        else:
+          tmp_index = 0
+          for it in range(12):
+            for ix in range(5):
+              ssit = -1500 + it * 250 #-3 + it * 0.5
+              ssix = -60 + ix * 30 #-2500 + ix * 1000
+              Flow(shift+str(tmp_index), in_name, '''
+                    put o1=500 d1=20 label1=Depth unit1=m 
+                    o2=0 d2=%g label2=Time unit2=s |
+                    transp plane=12 |
+                    bandpass fhi=500 |
+                    window j1=4 |
+                    pow pow1=%g |
+                    window f1=%g n1=%g |
+                    scale axis=1 |
+                    rotate rot1=%g rot2=%g 
+                    datapath=%s
+                    ''' % (dt, pow1, fa/dt/4, 2048, ssit, ssix, os.path.join(cwd, shift_dir) + str(tmp_index) ) ) # mkdir before hand
+              if if_plot:
+                titp="after\ shift\ " + channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+                Result(shift+str(tmp_index), get_grey(titp))
+              tmp_index += 1
+      else:
+        if not if_shift:
+          Flow(out_name, in_name, '''
+                put o1=500 d1=20 label1=Depth unit1=m 
+                o2=0 d2=%g label2=Time unit2=s |
+                transp plane=12 |
+                bandpass fhi=500 |
+                window j1=4 |
+                pow pow1=%g |
+                scale axis=1 
+                datapath=%s
+                ''' % (dt, pow1, os.path.join(cwd, pown_dir)) )
+          if if_plot:
+                titp="after\ cut\ " + channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+                Result(out_name, get_grey_small(titp))
+        else:
+          tmp_index = 0
+          for it in range(12):
+            for ix in range(5):
+              ssit = -1500 + it * 250 #-3 + it * 0.5
+              ssix = -60 + ix * 30 #-2500 + ix * 1000
+              Flow(shift+str(tmp_index), in_name, '''
+                    put o1=500 d1=20 label1=Depth unit1=m 
+                    o2=0 d2=%g label2=Time unit2=s |
+                    transp plane=12 |
+                    bandpass fhi=500 |
+                    window j1=4 |
+                    pow pow1=%g |
+                    scale axis=1 |
+                    rotate rot1=%g rot2=%g 
+                    datapath=%s
+                    ''' % (dt, pow1, ssit, ssix, os.path.join(cwd, shift_dir) + str(tmp_index) ) ) # mkdir before hand
+              if if_plot:
+                titp="after\ shift\ " + channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+                Result(shift+str(tmp_index), get_grey(titp))
+              tmp_index += 1
+

@@ -1,0 +1,66 @@
+## ======================================
+##      made by weiyw @ 2019-12-19
+##		update by weiyw @ 2020-1-9 get first arrival time point
+##    Email:     weiyw17@gmail.com
+## ======================================
+from rsf.proj import *
+import os
+cwd = os.getcwd()
+## parameters ===========================
+model_num    = 0
+shot_num     = 141
+channel_num  = 4
+channel_name = ['vz', 'vx', 'div', 'curl']
+depth1       = 15
+depth2       = 65
+depth3       = 115
+nx           = 801
+nz           = 467
+dx           = 10
+dz           = 10
+dt           = 0.0005
+nr           = 126
+nt           = 12004
+pow1         = 2
+if_routinue  = True
+if_plot      = True
+if_plotmodel = False
+if_spectrum  = False
+if_contrast  = False
+if_single_tr = False
+if_pow       = True
+if_snap_plot = False
+if_shift     = False
+if_slant     = False
+if_cut       = True
+snap_step    = 200
+it_start     = snap_step * 2
+it_end       = snap_step * int(nt / snap_step)
+snap_range   = range(it_start, it_end, snap_step)
+
+#dir_seismo   = "seismo"
+dir_seismo   = ""
+
+## main  ==============================
+for this_model in range(model_num, model_num+1):
+  for this_shot in range(50, 50+5*shot_num, 5):
+    #this_model = 10
+    this_channel = 0
+    rawd_name="output/model_"+str(this_model)+"_shot_"+ str(this_shot)+"_"+str(channel_name[this_channel]) + ".bin"
+    file_name = "model_" + str(this_model) + "_shot_" + str(this_shot) + "_" + channel_name[this_channel]
+    in_name = dir_seismo + file_name
+    out_name = in_name + "_plot_ready"
+    tit=channel_name[this_channel] + "\ of\ shot\ " + str(this_shot) + "\ model\ " + str(this_model)
+    
+    Flow(in_name+".rsf",'' , '''
+      echo in=%s n1=%g n2=%g 
+      data_format=native_float
+     ''' % ( os.path.join(cwd, rawd_name), nr, nt)  )
+    Flow(out_name, in_name, '''
+          put o1=500 d1=20 label1=Depth unit1=m 
+          o2=0 d2=%g label2=Time unit2=s |
+          transp plane=12 
+        ''' % dt )    
+    cut_file = in_name + "_cut"
+    Flow(cut_file+".txt", out_name, 'scale axis=1 | fbpick | despike wide=41 | stack min=y axis=1 | disfil number=0')
+
