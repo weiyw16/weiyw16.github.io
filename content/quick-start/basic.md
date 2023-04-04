@@ -1,7 +1,7 @@
 ---
 title: "Basic IO"
 date: 2023-04-04T18:11:37+08:00
-draft: true
+weight: 1
 ---
 
 ## 1. read and write binary 

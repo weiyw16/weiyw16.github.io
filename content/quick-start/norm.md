@@ -1,7 +1,6 @@
 ---
-title: "Pre-processing"
-date: 2023-04-04T18:28:49+08:00
-draft: true
+title : "Pre-processing"
+date : 2023-04-04T18:28:49+08:00
 ---
 ## Example
 Four basic pre-processing tools are used when constructing norm synthetic seismic data from raw simulated data. These four steps are:

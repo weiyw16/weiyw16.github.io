@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Test on vModel-432 :: Open VSP data</title>
+    <title>Basic IO :: Open VSP data</title>
 
     
     <link href="/css/nucleus.css?1680609505" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/">
+  <body class="" data-url="/en/quick-start/basic/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -143,7 +143,7 @@
   
     
     <li data-nav-id="/en/quick-start/" title="Quick Start" class="dd-item
-        
+        parent
         
         
         ">
@@ -171,7 +171,7 @@
  
   
     
-      <li data-nav-id="/en/quick-start/basic/" title="Basic IO" class="dd-item ">
+      <li data-nav-id="/en/quick-start/basic/" title="Basic IO" class="dd-item active">
         <a href="/en/quick-start/basic/">
         Basic IO
         <i class="fas fa-check read-icon"></i>
@@ -696,7 +696,7 @@
   
     
     <li data-nav-id="/en/seismic_data/" title="Seismic data" class="dd-item
-        parent
+        
         
         
         ">
@@ -727,7 +727,7 @@
   
     
     <li data-nav-id="/en/seismic_data/synthetic_2d_elastic_norm/" title="Synthetic 2D elastic walkaway VSP" class="dd-item
-        parent
+        
         
         
         ">
@@ -776,7 +776,7 @@
  
   
     
-      <li data-nav-id="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/" title="Test on vModel-432" class="dd-item active">
+      <li data-nav-id="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/" title="Test on vModel-432" class="dd-item ">
         <a href="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/">
         Test on vModel-432
         <i class="fas fa-check read-icon"></i>
@@ -1352,7 +1352,7 @@
                   
                     
                     
-                      <option id="en" value="https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/" selected>English</option>
+                      <option id="en" value="https://weiyw16.github.io/en/quick-start/basic/" selected>English</option>
                     
                   
               
@@ -1413,7 +1413,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://weiyw16.github.ioseismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://weiyw16.github.ioquick-start/basic.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1444,13 +1444,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/en/'>Open VSP data: A large scale open Vertical Seismic Profiling data</a> > <a href='/en/seismic_data/'>Seismic data</a> > <a href='/en/seismic_data/synthetic_2d_elastic_norm/'>Synthetic 2D elastic walkaway VSP</a> > Test on vModel-432
-          
-        
+            <a href='/en/'>Open VSP data: A large scale open Vertical Seismic Profiling data</a> > <a href='/en/quick-start/'>Quick Start</a> > Basic IO
           
         
           
@@ -1465,17 +1459,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#p-velocity-model">P velocity model</a></li>
-    <li><a href="#example-2d-elastic-seismic-shot-gather">Example 2D elastic seismic shot gather</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#example-2d-elastic-p--and-s-potential-separation">Example 2D elastic P- and S-potential separation</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#1-read-and-write-binary">1. read and write binary</a></li>
+    <li><a href="#2-convert-binary-to-npy--npy-to-binary">2. convert binary to .npy | .npy to binary</a></li>
+    <li><a href="#3-parallel-binary-to-npy">3. parallel binary to .npy</a></li>
   </ul>
 </nav>
     </div>
@@ -1493,763 +1479,55 @@
           
             <h1>
               
-              Test on vModel-432
+              Basic IO
             </h1>
           
 
         
 
 
-<h2 id="p-velocity-model">P velocity model</h2>
-<p><img src="/images/data_prepare/velocity-model/vp_432.svg?width=40pc" alt="vp432">
-<a href="/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_432/">seismic data for train</a> |
-<a href="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/">seismic data for test</a></p>
-<h2 id="example-2d-elastic-seismic-shot-gather">Example 2D elastic seismic shot gather</h2>
-<h4 id="vz-component">Vz component</h4>
-<script src= '/js/pdf-js/build/pdf.js'></script>
-
-<style>
-  #embed-pdf-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 20vh;
-     
-  }
-  
-  .pdf-canvas {
-    border: 1px solid black;
-    direction: ltr;
-    width: 100%;
-    height: auto;
-    display: none;
-  }
-  
-  #the-canvas {
-    border: 1px solid black;
-    direction: ltr;
-    width: 100%;
-    height: auto;
-    display: none;
-  }
-  
-  
-  .pdf-loadingWrapper {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 350px;
-  }
-  
-  .pdf-loading {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #d2d0d0;;
-    border-radius: 50%;
-    border-top-color: #383838;
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite;
-  }
-  
-  
-  
-  
-  
-  #overlayText {
-    word-wrap: break-word;
-    display: grid;
-    justify-content: end;
-  }
-  
-  #overlayText a {
-    position: relative;
-    top: 10px;
-    right: 4px;
-    color: #000;
-    margin: auto;
-    background-color: #eeeeee;
-    padding: 0.3em 1em;
-    border: solid 2px;
-    border-radius: 12px;
-    border-color: #00000030;
-    text-decoration: none;
-  }
-  
-  #overlayText svg {
-    height: clamp(1em, 2vw, 1.4em);
-    width:  clamp(1em, 2vw, 1.4em);
-  }
-  
-  
-  
-  @keyframes spin {
-    to { -webkit-transform: rotate(360deg); }
-  }
-  @-webkit-keyframes spin {
-    to { -webkit-transform: rotate(360deg); }
-  }
-  </style><div class="embed-pdf-container" id="embed-pdf-container-7dcc2fd5">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-7dcc2fd5">
-        <div class="pdf-loading" id="pdf-loading-7dcc2fd5"></div>
-    </div>
-    <div id="overlayText">
-      <a href="/images/data_prepare/seismc-data/test_model_432/single_comp_vz_50-60.pdf" aria-label="Download" download>
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-        </svg>
-      </a>
-    </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-7dcc2fd5"></canvas>
-</div>
-
-<div class="pdf-paginator" id="pdf-paginator-7dcc2fd5">
-    <button id="pdf-prev-7dcc2fd5">Previous</button>
-    <button id="pdf-next-7dcc2fd5">Next</button> &nbsp; &nbsp;
-    <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-7dcc2fd5"></span> / <span class="pdf-pagecount" id="pdf-pagecount-7dcc2fd5"></span>
-    </span>
-    <a class="pdf-source" id="pdf-source-7dcc2fd5" href="/images/data_prepare/seismc-data/test_model_432/single_comp_vz_50-60.pdf">[pdf]</a>
-</div>
-
-<noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-7dcc2fd5" href="/images/data_prepare/seismc-data/test_model_432/single_comp_vz_50-60.pdf">here</a>.
-</noscript>
-
-<script type="text/javascript">
-    (function(){
-    var url = '\/images\/data_prepare\/seismc-data\/test_model_432\/single_comp_vz_50-60.pdf';
-
-    var hidePaginator = "" === "true";
-    var hideLoader = "" === "true";
-    var selectedPageNum = parseInt("") || 1;
-
-    
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-    
-    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/weiyw16.github.io" + 'js/pdf-js/build/pdf.worker.js';
-
-    
-    var pdfDoc = null,
-        pageNum = selectedPageNum,
-        pageRendering = false,
-        pageNumPending = null,
-        scale = 3,
-        canvas = document.getElementById('pdf-canvas-7dcc2fd5'),
-        ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-7dcc2fd5"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-7dcc2fd5');
-
-
-    
-    showPaginator();
-    showLoader();
-
-    
-
-    function renderPage(num) {
-      pageRendering = true;
-      
-      pdfDoc.getPage(num).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        
-        var renderContext = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
-
-        
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
-
-          if (pageNumPending !== null) {
-            
-            renderPage(pageNumPending);
-            pageNumPending = null;
-          }
-        });
-      });
-
-      
-      document.getElementById('pdf-pagenum-7dcc2fd5').textContent = num;
-    }
-
-    
-
-    function showContent() {
-      loadingWrapper.style.display = 'none';
-      canvas.style.display = 'block';
-    }
-
-    
-
-    function showLoader() {
-      if(hideLoader) return
-      loadingWrapper.style.display = 'flex';
-      canvas.style.display = 'none';
-    }
-
-    
-
-    function showPaginator() {
-      if(hidePaginator) return
-      paginator.style.display = 'block';
-    }
-
-    
-
-    function queueRenderPage(num) {
-      if (pageRendering) {
-        pageNumPending = num;
-      } else {
-        renderPage(num);
-      }
-    }
-
-    
-
-    function onPrevPage() {
-      if (pageNum <= 1) {
-        return;
-      }
-      pageNum--;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-prev-7dcc2fd5').addEventListener('click', onPrevPage);
-
-    
-
-    function onNextPage() {
-      if (pageNum >= pdfDoc.numPages) {
-        return;
-      }
-      pageNum++;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-next-7dcc2fd5').addEventListener('click', onNextPage);
-
-    
-
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-      pdfDoc = pdfDoc_;
-      var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-7dcc2fd5').textContent = numPages;
-
-      
-      if(pageNum > numPages) {
-        pageNum = numPages
-      }
-
-      
-      renderPage(pageNum);
-    });
-    })();
-</script>
-
-<h4 id="vx-component">Vx component</h4>
-<div class="embed-pdf-container" id="embed-pdf-container-576f6893">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-576f6893">
-        <div class="pdf-loading" id="pdf-loading-576f6893"></div>
-    </div>
-    <div id="overlayText">
-      <a href="/images/data_prepare/seismc-data/test_model_432/single_comp_vx_50-60.pdf" aria-label="Download" download>
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-        </svg>
-      </a>
-    </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-576f6893"></canvas>
-</div>
-
-<div class="pdf-paginator" id="pdf-paginator-576f6893">
-    <button id="pdf-prev-576f6893">Previous</button>
-    <button id="pdf-next-576f6893">Next</button> &nbsp; &nbsp;
-    <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-576f6893"></span> / <span class="pdf-pagecount" id="pdf-pagecount-576f6893"></span>
-    </span>
-    <a class="pdf-source" id="pdf-source-576f6893" href="/images/data_prepare/seismc-data/test_model_432/single_comp_vx_50-60.pdf">[pdf]</a>
-</div>
-
-<noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-576f6893" href="/images/data_prepare/seismc-data/test_model_432/single_comp_vx_50-60.pdf">here</a>.
-</noscript>
-
-<script type="text/javascript">
-    (function(){
-    var url = '\/images\/data_prepare\/seismc-data\/test_model_432\/single_comp_vx_50-60.pdf';
-
-    var hidePaginator = "" === "true";
-    var hideLoader = "" === "true";
-    var selectedPageNum = parseInt("") || 1;
-
-    
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-    
-    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/weiyw16.github.io" + 'js/pdf-js/build/pdf.worker.js';
-
-    
-    var pdfDoc = null,
-        pageNum = selectedPageNum,
-        pageRendering = false,
-        pageNumPending = null,
-        scale = 3,
-        canvas = document.getElementById('pdf-canvas-576f6893'),
-        ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-576f6893"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-576f6893');
-
-
-    
-    showPaginator();
-    showLoader();
-
-    
-
-    function renderPage(num) {
-      pageRendering = true;
-      
-      pdfDoc.getPage(num).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        
-        var renderContext = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
-
-        
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
-
-          if (pageNumPending !== null) {
-            
-            renderPage(pageNumPending);
-            pageNumPending = null;
-          }
-        });
-      });
-
-      
-      document.getElementById('pdf-pagenum-576f6893').textContent = num;
-    }
-
-    
-
-    function showContent() {
-      loadingWrapper.style.display = 'none';
-      canvas.style.display = 'block';
-    }
-
-    
-
-    function showLoader() {
-      if(hideLoader) return
-      loadingWrapper.style.display = 'flex';
-      canvas.style.display = 'none';
-    }
-
-    
-
-    function showPaginator() {
-      if(hidePaginator) return
-      paginator.style.display = 'block';
-    }
-
-    
-
-    function queueRenderPage(num) {
-      if (pageRendering) {
-        pageNumPending = num;
-      } else {
-        renderPage(num);
-      }
-    }
-
-    
-
-    function onPrevPage() {
-      if (pageNum <= 1) {
-        return;
-      }
-      pageNum--;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-prev-576f6893').addEventListener('click', onPrevPage);
-
-    
-
-    function onNextPage() {
-      if (pageNum >= pdfDoc.numPages) {
-        return;
-      }
-      pageNum++;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-next-576f6893').addEventListener('click', onNextPage);
-
-    
-
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-      pdfDoc = pdfDoc_;
-      var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-576f6893').textContent = numPages;
-
-      
-      if(pageNum > numPages) {
-        pageNum = numPages
-      }
-
-      
-      renderPage(pageNum);
-    });
-    })();
-</script>
-
-<h2 id="example-2d-elastic-p--and-s-potential-separation">Example 2D elastic P- and S-potential separation</h2>
-<h4 id="p-potential--p-waves">P-potential / P-waves</h4>
-<div class="embed-pdf-container" id="embed-pdf-container-731c5b51">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-731c5b51">
-        <div class="pdf-loading" id="pdf-loading-731c5b51"></div>
-    </div>
-    <div id="overlayText">
-      <a href="/images/data_prepare/seismc-data/test_model_432/single_comp_div_50-60.pdf" aria-label="Download" download>
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-        </svg>
-      </a>
-    </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-731c5b51"></canvas>
-</div>
-
-<div class="pdf-paginator" id="pdf-paginator-731c5b51">
-    <button id="pdf-prev-731c5b51">Previous</button>
-    <button id="pdf-next-731c5b51">Next</button> &nbsp; &nbsp;
-    <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-731c5b51"></span> / <span class="pdf-pagecount" id="pdf-pagecount-731c5b51"></span>
-    </span>
-    <a class="pdf-source" id="pdf-source-731c5b51" href="/images/data_prepare/seismc-data/test_model_432/single_comp_div_50-60.pdf">[pdf]</a>
-</div>
-
-<noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-731c5b51" href="/images/data_prepare/seismc-data/test_model_432/single_comp_div_50-60.pdf">here</a>.
-</noscript>
-
-<script type="text/javascript">
-    (function(){
-    var url = '\/images\/data_prepare\/seismc-data\/test_model_432\/single_comp_div_50-60.pdf';
-
-    var hidePaginator = "" === "true";
-    var hideLoader = "" === "true";
-    var selectedPageNum = parseInt("") || 1;
-
-    
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-    
-    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/weiyw16.github.io" + 'js/pdf-js/build/pdf.worker.js';
-
-    
-    var pdfDoc = null,
-        pageNum = selectedPageNum,
-        pageRendering = false,
-        pageNumPending = null,
-        scale = 3,
-        canvas = document.getElementById('pdf-canvas-731c5b51'),
-        ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-731c5b51"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-731c5b51');
-
-
-    
-    showPaginator();
-    showLoader();
-
-    
-
-    function renderPage(num) {
-      pageRendering = true;
-      
-      pdfDoc.getPage(num).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        
-        var renderContext = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
-
-        
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
-
-          if (pageNumPending !== null) {
-            
-            renderPage(pageNumPending);
-            pageNumPending = null;
-          }
-        });
-      });
-
-      
-      document.getElementById('pdf-pagenum-731c5b51').textContent = num;
-    }
-
-    
-
-    function showContent() {
-      loadingWrapper.style.display = 'none';
-      canvas.style.display = 'block';
-    }
-
-    
-
-    function showLoader() {
-      if(hideLoader) return
-      loadingWrapper.style.display = 'flex';
-      canvas.style.display = 'none';
-    }
-
-    
-
-    function showPaginator() {
-      if(hidePaginator) return
-      paginator.style.display = 'block';
-    }
-
-    
-
-    function queueRenderPage(num) {
-      if (pageRendering) {
-        pageNumPending = num;
-      } else {
-        renderPage(num);
-      }
-    }
-
-    
-
-    function onPrevPage() {
-      if (pageNum <= 1) {
-        return;
-      }
-      pageNum--;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-prev-731c5b51').addEventListener('click', onPrevPage);
-
-    
-
-    function onNextPage() {
-      if (pageNum >= pdfDoc.numPages) {
-        return;
-      }
-      pageNum++;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-next-731c5b51').addEventListener('click', onNextPage);
-
-    
-
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-      pdfDoc = pdfDoc_;
-      var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-731c5b51').textContent = numPages;
-
-      
-      if(pageNum > numPages) {
-        pageNum = numPages
-      }
-
-      
-      renderPage(pageNum);
-    });
-    })();
-</script>
-
-<h4 id="s-potential--s-waves">S-potential / S-waves</h4>
-<div class="embed-pdf-container" id="embed-pdf-container-e5bd038a">
-    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-e5bd038a">
-        <div class="pdf-loading" id="pdf-loading-e5bd038a"></div>
-    </div>
-    <div id="overlayText">
-      <a href="/images/data_prepare/seismc-data/test_model_432/single_comp_curl_50-60.pdf" aria-label="Download" download>
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-        </svg>
-      </a>
-    </div>
-    <canvas class="pdf-canvas" id="pdf-canvas-e5bd038a"></canvas>
-</div>
-
-<div class="pdf-paginator" id="pdf-paginator-e5bd038a">
-    <button id="pdf-prev-e5bd038a">Previous</button>
-    <button id="pdf-next-e5bd038a">Next</button> &nbsp; &nbsp;
-    <span>
-      <span class="pdf-pagenum" id="pdf-pagenum-e5bd038a"></span> / <span class="pdf-pagecount" id="pdf-pagecount-e5bd038a"></span>
-    </span>
-    <a class="pdf-source" id="pdf-source-e5bd038a" href="/images/data_prepare/seismc-data/test_model_432/single_comp_curl_50-60.pdf">[pdf]</a>
-</div>
-
-<noscript>
-View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="/images/data_prepare/seismc-data/test_model_432/single_comp_curl_50-60.pdf">here</a>.
-</noscript>
-
-<script type="text/javascript">
-    (function(){
-    var url = '\/images\/data_prepare\/seismc-data\/test_model_432\/single_comp_curl_50-60.pdf';
-
-    var hidePaginator = "" === "true";
-    var hideLoader = "" === "true";
-    var selectedPageNum = parseInt("") || 1;
-
-    
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-    
-    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/weiyw16.github.io" + 'js/pdf-js/build/pdf.worker.js';
-
-    
-    var pdfDoc = null,
-        pageNum = selectedPageNum,
-        pageRendering = false,
-        pageNumPending = null,
-        scale = 3,
-        canvas = document.getElementById('pdf-canvas-e5bd038a'),
-        ctx = canvas.getContext('2d'),
-        paginator = document.getElementById("pdf-paginator-e5bd038a"),
-        loadingWrapper = document.getElementById('pdf-loadingWrapper-e5bd038a');
-
-
-    
-    showPaginator();
-    showLoader();
-
-    
-
-    function renderPage(num) {
-      pageRendering = true;
-      
-      pdfDoc.getPage(num).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        
-        var renderContext = {
-          canvasContext: ctx,
-          viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
-
-        
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
-
-          if (pageNumPending !== null) {
-            
-            renderPage(pageNumPending);
-            pageNumPending = null;
-          }
-        });
-      });
-
-      
-      document.getElementById('pdf-pagenum-e5bd038a').textContent = num;
-    }
-
-    
-
-    function showContent() {
-      loadingWrapper.style.display = 'none';
-      canvas.style.display = 'block';
-    }
-
-    
-
-    function showLoader() {
-      if(hideLoader) return
-      loadingWrapper.style.display = 'flex';
-      canvas.style.display = 'none';
-    }
-
-    
-
-    function showPaginator() {
-      if(hidePaginator) return
-      paginator.style.display = 'block';
-    }
-
-    
-
-    function queueRenderPage(num) {
-      if (pageRendering) {
-        pageNumPending = num;
-      } else {
-        renderPage(num);
-      }
-    }
-
-    
-
-    function onPrevPage() {
-      if (pageNum <= 1) {
-        return;
-      }
-      pageNum--;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-prev-e5bd038a').addEventListener('click', onPrevPage);
-
-    
-
-    function onNextPage() {
-      if (pageNum >= pdfDoc.numPages) {
-        return;
-      }
-      pageNum++;
-      queueRenderPage(pageNum);
-    }
-    document.getElementById('pdf-next-e5bd038a').addEventListener('click', onNextPage);
-
-    
-
-    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-      pdfDoc = pdfDoc_;
-      var numPages = pdfDoc.numPages;
-      document.getElementById('pdf-pagecount-e5bd038a').textContent = numPages;
-
-      
-      if(pageNum > numPages) {
-        pageNum = numPages
-      }
-
-      
-      renderPage(pageNum);
-    });
-    })();
-</script>
-
+<h2 id="1-read-and-write-binary">1. read and write binary</h2>
+<p>We use <a href="https://docs.python.org/3/library/struct.html"><code>struct</code></a>(a python package) to read binary data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># coding: utf-8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> struct
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">readin_bin</span>(path<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, seek_num<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nt<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    FA <span style="color:#f92672">=</span> open(path, <span style="color:#e6db74">&#34;rb&#34;</span>)
+</span></span><span style="display:flex;"><span>    FA<span style="color:#f92672">.</span>seek(seek_num) <span style="color:#75715e"># skip N bit to start reading in data</span>
+</span></span><span style="display:flex;"><span>    out_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>empty((nt,nr))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> rr <span style="color:#f92672">in</span> range(nr):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> tt <span style="color:#f92672">in</span> range(nt):
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> FA<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">4</span>) <span style="color:#75715e"># read 4 bit float</span>
+</span></span><span style="display:flex;"><span>            data_float <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>unpack(<span style="color:#e6db74">&#34;f&#34;</span>, data)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>            out_data[tt][rr] <span style="color:#f92672">=</span> data_float
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> out_data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">writeout_bin</span>(path<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, in_data<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, seek_num<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nt<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    FA <span style="color:#f92672">=</span> open(path, <span style="color:#e6db74">&#34;wb&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> rr <span style="color:#f92672">in</span> range(nr):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> tt <span style="color:#f92672">in</span> range(nt):
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> in_data[tt][rr] <span style="color:#75715e">#FA.read(4)</span>
+</span></span><span style="display:flex;"><span>            data_float <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#34;f&#34;</span>, data)
+</span></span><span style="display:flex;"><span>            FA<span style="color:#f92672">.</span>write(data_float)
+</span></span><span style="display:flex;"><span>    FA<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h2 id="2-convert-binary-to-npy--npy-to-binary">2. convert binary to .npy | .npy to binary</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">npy2bin</span>(inname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, ouname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, seek_num<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, nt<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>  indata <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>load(inname)
+</span></span><span style="display:flex;"><span>  writeout_bin(path<span style="color:#f92672">=</span>ouname, in_data<span style="color:#f92672">=</span>indata, seek_num<span style="color:#f92672">=</span>seek_num, nt<span style="color:#f92672">=</span>nt, nr<span style="color:#f92672">=</span>nr)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> indata
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bin2npy</span>(inname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, ouname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, seek_num<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, nt<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, nr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>  indata <span style="color:#f92672">=</span> readin_bin(path<span style="color:#f92672">=</span>inname, seek_num<span style="color:#f92672">=</span>seek_num, nt<span style="color:#f92672">=</span>nt, nr<span style="color:#f92672">=</span>nr)
+</span></span><span style="display:flex;"><span>  np<span style="color:#f92672">.</span>save(ouname, indata)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> indata
+</span></span></code></pre></div><h2 id="3-parallel-binary-to-npy">3. parallel binary to .npy</h2>
+<p>find more scripts in our <a href="https://github.com/weiyw16/weiyw16.github.io/blob/main/scripts/workflow/3-rename_data/template_rename/bin2npy_convert.py">github</a></p>
 
 
 <footer class="footline">
@@ -2306,6 +1584,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
                 
                     
+                    
                 
                 
 
@@ -2318,6 +1597,7 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
             
                 
+                    
                     
                 
                 
@@ -2335,6 +1615,9 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2376,38 +1659,6 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2681,49 +1932,10 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
         
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2741,6 +1953,55 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2758,8 +2019,21 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -3155,10 +2429,10 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-e5bd038a" href="
 	 
 	 
 		
-			<a class="nav nav-prev" href="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_10/" title="Test on vModel-10"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/en/quick-start/" title="Quick Start"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_52/" title="Test on vModel-52" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/en/quick-start/norm/" title="Pre-processing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
