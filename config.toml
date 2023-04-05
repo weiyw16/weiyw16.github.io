@@ -2,6 +2,8 @@ baseURL = "https://weiyw16.github.io"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
+googleAnalytics = "G-37VEWJXJ55"
+
 title = "Open VSP data"
 theme = ["hugo-embed-pdf-shortcode", "hugo-theme-learn"]
 themesdir = "./themes"
