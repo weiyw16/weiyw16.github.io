@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open VSP data: A large scale open Vertical Seismic Profiling data on Open VSP data</title>
+    <link>https://weiyw16.github.io/en/</link>
+    <description>Recent content in Open VSP data: A large scale open Vertical Seismic Profiling data on Open VSP data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 04 Apr 2023 18:28:49 +0800</lastBuildDate><atom:link href="https://weiyw16.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic IO</title>
+      <link>https://weiyw16.github.io/en/quick-start/basic/</link>
+      <pubDate>Tue, 04 Apr 2023 18:11:37 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/quick-start/basic/</guid>
+      <description>1. read and write binary We use struct(a python package) to read binary data.
+#!/usr/bin/env python # coding: utf-8 import numpy as np import os import struct def readin_bin(path=None, seek_num=None, nt=None, nr=None): FA = open(path, &amp;#34;rb&amp;#34;) FA.seek(seek_num) # skip N bit to start reading in data out_data = np.empty((nt,nr)) for rr in range(nr): for tt in range(nt): data = FA.read(4) # read 4 bit float data_float = struct.unpack(&amp;#34;f&amp;#34;, data)[0] out_data[tt][rr] = data_float return out_data def writeout_bin(path=None, in_data=None, seek_num=None, nt=None, nr=None): FA = open(path, &amp;#34;wb&amp;#34;) for rr in range(nr): for tt in range(nt): data = in_data[tt][rr] #FA.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-10</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_10/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_10/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-432</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_432/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-52</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_52/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_52/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-62</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_62/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_62/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-66</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_66/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_66/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-80</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_80/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_80/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-81</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_81/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_81/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-94</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_94/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_94/</guid>
+      <description>P velocity model seismic data for train (base model is vModel-10) | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-95</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_95/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_95/</guid>
+      <description>P velocity model seismic data for train (base model is vModel-10) | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Test on vModel-96</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_96/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortest/fortest_model_96/</guid>
+      <description>P velocity model seismic data for train (base model is vModel-10) | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-10</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_10/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-414</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_414/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_414/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-416</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_416/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_416/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-419</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_419/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_419/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-430</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_430/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_430/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-431</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_431/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_431/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-432</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_432/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_432/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-450</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_450/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_450/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-451</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_451/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_451/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-452</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_452/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_452/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-453</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_453/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_453/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-52</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_52/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_52/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-62</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_62/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_62/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-66</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_66/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_66/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-80</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_80/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_80/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>Train on vModel-81</title>
+      <link>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_81/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/seismic_data/synthetic_2d_elastic_norm/fortrain/fortrain_model_81/</guid>
+      <description>P velocity model seismic data for train | seismic data for test
+Example 2D elastic seismic shot gather Vz component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Vx component Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Example 2D elastic P- and S-potential separation P-potential / P-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. S-potential / S-waves Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+    </item>
+    
+    <item>
+      <title>vModel-10</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_10/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_10/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-414</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_414/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_414/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-416</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_416/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_416/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-419</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_419/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_419/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-430</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_430/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_430/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-431</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_431/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_431/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-432</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_432/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_432/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-450</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_450/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_450/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-451</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_451/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_451/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-452</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_452/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_452/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-453</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_453/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_453/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-52</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_52/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_52/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-62</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_62/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_62/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-66</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_66/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_66/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-80</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_80/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_80/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-81</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_81/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_81/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-94</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_94/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_94/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-95</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_95/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_95/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>vModel-96</title>
+      <link>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_96/</link>
+      <pubDate>Tue, 28 Mar 2023 21:29:22 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/velocity_model/model_index/models/smodel_96/</guid>
+      <description>P velocity model seismic data for train | seismic data for test</description>
+    </item>
+    
+    <item>
+      <title>Pre-processing</title>
+      <link>https://weiyw16.github.io/en/quick-start/norm/</link>
+      <pubDate>Tue, 04 Apr 2023 18:28:49 +0800</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/quick-start/norm/</guid>
+      <description>Example Four basic pre-processing tools are used when constructing norm synthetic seismic data from raw simulated data. These four steps are:
+re-sample time power window normalization In a partial Madagascar Sconstruct example as what shown in the following codeblock, sfbandpass, sfwindow are used for re-sampling, where sfbandpass are applied before down-sampling to avoid aliasing.
+Then, sfpow is used for amplitude balance along the time axis, where attenuation caused by geometry spreading would be alleviated.</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>https://weiyw16.github.io/en/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/credits/</guid>
+      <description>Contributors Thanks to Tsinghua HPGC group for supporting us to produce and open this data.
+Packages and libraries Madagascar - open-source software package for multidimensional data analysis and reproducible computational experiments. Python - programming language that lets you work quickly and integrate systems more effectively. Tooling Hugo - Open source software for web building. </description>
+    </item>
+    
+    <item>
+      <title>Related work</title>
+      <link>https://weiyw16.github.io/en/showcase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weiyw16.github.io/en/showcase/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
